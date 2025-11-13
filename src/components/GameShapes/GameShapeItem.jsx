@@ -1,6 +1,6 @@
 import useGameData from "../../store/useGameData";
 
-export default function GameShapeBtn({ shapeData }) {
+export default function GameShapeItem({ shapeData }) {
   const updateBattlePhase = useGameData((state) => state.updateBattlePhase);
   const battleStarted = useGameData((state) => state.battleStarted);
 
