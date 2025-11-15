@@ -5,8 +5,10 @@ import PreBattlePhase from "./PreBattlePhase";
 export default function GameShapes() {
   const battleStarted = useGameData((state) => state.battleStarted);
   return (
-    <main>
-      <section>{battleStarted ? <BattlePhase /> : <PreBattlePhase />}</section>
+    <main className="pt-20 flex-1">
+      <section className="relative max-w-100 flex flex-wrap justify-center gap-10">
+        {battleStarted ? <BattlePhase /> : <PreBattlePhase />}
+      </section>
     </main>
   );
 }
