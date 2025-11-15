@@ -17,7 +17,10 @@
     --inset-shadow-testing: inset 0px -6px 0px 0px #00000040;
 }
 
-html,
+html {
+    background: black
+}
+
 body,
 #root {
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
