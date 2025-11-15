@@ -14,15 +14,15 @@ export default function GameShapeItem({ shapeData }) {
     <section
       className={`z-1 relative w-32 rounded-full aspect-square flex-none bg-white border-18 ${
         borderColors[shapeData.name]
-      } inset-shadow-choose-btn primary-btn-shadow`}>
-      {/* <button
-        className=" w-full h-full flex items-center justify-center"
+      } inset-shadow-choose-btn flex justify-center items-center`}>
+      <button
+        className="flex justify-center items-center"
         disabled={battleStarted}
         id={shapeData.id}
         onClick={(e) => updateBattlePhase(e)}
         type="button">
         <shapeData.icon />
-      </button> */}
+      </button>
     </section>
   );
 }
