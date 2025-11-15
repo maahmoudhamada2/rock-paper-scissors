@@ -12,7 +12,7 @@ export default function GameShapeItem({ shapeData }) {
 
   return (
     <section
-      className={`z-1 relative w-32 rounded-[50%] aspect-square bg-white border-18 ${
+      className={`z-1 relative w-32 rounded-[50%] aspect-square flex-none bg-white border-18 ${
         borderColors[shapeData.name]
       } inset-shadow-choose-btn primary-btn-shadow`}>
       <button
