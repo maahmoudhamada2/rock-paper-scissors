@@ -18,8 +18,8 @@
 }
 
 html {
-    /* background: hsl(237, 47%, 23%); */
-    background: red;
+    background: hsl(237, 47%, 23%);
+    min-height: 100vh;
 }
 
 body,
