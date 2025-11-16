@@ -20,7 +20,7 @@
 html,
 body {
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 body,
