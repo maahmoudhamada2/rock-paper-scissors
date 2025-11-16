@@ -18,7 +18,8 @@
 }
 
 html {
-    background: hsl(237, 47%, 23%);
+    /* background: hsl(237, 47%, 23%); */
+    background: red;
 }
 
 body,
