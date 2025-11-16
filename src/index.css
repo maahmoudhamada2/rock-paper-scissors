@@ -18,12 +18,11 @@
 }
 
 html {
-    background: red;
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
 }
 
 body,
 #root {
-    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
     font-family: "Barlow Semi Condensed", sans-serif;
     min-height: 100vh;
 }
