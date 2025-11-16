@@ -11,19 +11,13 @@ export default function Footer() {
         RULES
       </button>
       {showRules ? (
-        <section>
-          <div>
-            <header>
-              <h1>RULES</h1>
-            </header>
-            <main>
-              <GameRules />
-            </main>
-            <footer>
-              <button onClick={() => setShowRules((prev) => !prev)}>
-                <CloseIcon />
-              </button>
-            </footer>
+        <section className="w-full h-full z-2 bg-white absolute top-0 left-0 flex justify-center items-center ">
+          <div className="w-full h-full p-[2rem] flex flex-col justify-around items-center ">
+            <h1 className="text-[1.5rem] font-bold">RULES</h1>
+            <GameRules className="w-full" />
+            <button onClick={() => setShowRules((prev) => !prev)}>
+              <CloseIcon />
+            </button>
           </div>
         </section>
       ) : null}
