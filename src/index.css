@@ -25,12 +25,13 @@
 html,
 body,
 #root {
-    @apply w-full min-h-[100dvh];
+    width: 100%;
+    min-height: -webkit-fill-available;
     font-family: "Barlow Semi Condensed", sans-serif;
     overscroll-behavior-y: contain;
 }
 
-body,
+
 #root {
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
 }
