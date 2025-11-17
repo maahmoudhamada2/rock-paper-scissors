@@ -14,7 +14,7 @@ export default function GameShapeItem({ shapeData }) {
     <section
       className={`z-1 relative w-32 rounded-full aspect-square flex-none bg-white border-18 ${
         borderColors[shapeData.name]
-      } inset-shadow-choose-btn flex justify-center items-center `}>
+      } inset-shadow-choose-btn flex justify-center items-center sm:w-[10rem] `}>
       <button
         className="flex justify-center items-center"
         disabled={battleStarted}

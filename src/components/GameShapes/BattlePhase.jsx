@@ -16,15 +16,15 @@ export default function BattlePhase() {
   }, []);
   return (
     <>
-      <section className="pb-6 flex flex-col items-center gap-4">
+      <section className="pb-6 flex flex-col items-center gap-4 sm:flex-col-reverse sm:order-1">
         <GameShapeItem shapeData={playerChoice} isComp={false} />
         <p className="text-[0.8rem] text-white font-bold">YOU PICKED</p>
       </section>
-      <section className="pb-6 flex flex-col items-center gap-4">
+      <section className="pb-6 flex flex-col items-center gap-4 sm:flex-col-reverse sm:order-3">
         {showResult ? (
           <GameShapeItem shapeData={computerChoice} />
         ) : (
-          <div className="w-32 aspect-square rounded-full bg-[#182844]"></div>
+          <div className="w-32 aspect-square rounded-full bg-[#182844] sm:w-[10rem]"></div>
         )}
         <p className="text-[0.8rem] text-white font-bold">THE HOUSE PICKED</p>
       </section>
