@@ -17,22 +17,16 @@
     --inset-shadow-testing: inset 0px -6px 0px 0px #00000040;
 }
 
-html,
-body {
-    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
-    background-attachment: fixed;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    /* min-height: 100vh; */
-}
 
+
+
+html,
 body,
 #root {
+    @apply w-full min-h-screen;
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
     font-family: "Barlow Semi Condensed", sans-serif;
-    min-height: 100vh;
 }
-
-
 
 svg {
     pointer-events: none;
