@@ -35,6 +35,11 @@ body,
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
 }
 
+
+body {
+    min-height: -webkit-fill-availabel
+}
+
 svg {
     pointer-events: none;
 }
