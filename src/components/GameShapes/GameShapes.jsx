@@ -1,12 +1,20 @@
 import useGameData from "../../store/useGameData";
 import BattlePhase from "./BattlePhase";
 import PreBattlePhase from "./PreBattlePhase";
-
+import clsx from "clsx";
 export default function GameShapes() {
   const battleStarted = useGameData((state) => state.battleStarted);
   return (
-    <main className="flex-1 pt-[4rem] sm:pt-[2rem]">
-      <section className="relative max-w-100 flex flex-wrap justify-center gap-10 sm:max-w-[unset]">
+    <main
+      className={clsx(
+        `relative flex justify-center flex-1`,
+        battleStarted ? "pt-[4rem] items-start" : "items-center"
+      )}>
+      <section
+        className={clsx(
+          `max-w-[25rem] flex flex-wrap justify-center items-center gap-x-[3rem]`,
+          battleStarted ? "gap-y-[5rem]" : "gap-y-[2.5rem]"
+        )}>
         {battleStarted ? <BattlePhase /> : <PreBattlePhase />}
       </section>
     </main>

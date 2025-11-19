@@ -3,7 +3,7 @@ import GameShapes from "./components/GameShapes/GameShapes";
 import Footer from "./components/Footer/Footer";
 export default function App() {
   return (
-    <article className="w-full h-full min-h-[100vh] p-4 flex flex-col justify-between items-center">
+    <article className="h-screen p-4 flex flex-col items-center">
       <Header />
       <GameShapes />
       <Footer />
