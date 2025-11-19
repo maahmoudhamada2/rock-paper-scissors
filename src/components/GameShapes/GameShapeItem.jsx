@@ -10,14 +10,14 @@ export default function GameShapeItem({ shapeData, size }) {
     rock: "border-red-600",
   };
   const btnSizes = {
-    sm: "w-[7rem]",
-    lg: "w-[8rem]",
+    sm: "w-[8rem]",
+    lg: "w-[9rem]",
   };
   return (
     <section
       className={`${btnSizes[size]}  border-16 ${
         borderColors[shapeData.name]
-      } aspect-square bg-white rounded-full`}>
+      } aspect-square bg-white rounded-full z-1`}>
       <button
         className="flex justify-center items-center rounded-full aspect-square flex items-center justify-center"
         disabled={battleStarted}
