@@ -1,4 +1,4 @@
-const GameRules = (props) => (
+const GameRulesImg = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 270" {...props}>
     <defs>
       <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
@@ -135,4 +135,4 @@ const GameRules = (props) => (
     </g>
   </svg>
 );
-export default GameRules;
+export default GameRulesImg;

@@ -6,6 +6,7 @@ const useGameData = create((set) => ({
     score: 0,
     battleStarted: false,
     showResult: false,
+    showRules: false,
     resultStatus: "",
 
     battlePhase: {
@@ -33,6 +34,7 @@ const useGameData = create((set) => ({
             icon: RockIcon,
         },
     ],
+    updateShowRules: () => set(state => ({ ...state, showRules: !state.showRules })),
     updateShowResult: () => set(state => updateShowResultHelper(state)),
     updateBattlePhase: (e) => set(state => BattlePhaseHelper(state, e)),
     resetBattlePhase: () => set(state => resetBattlePhaseHelper(state)),
