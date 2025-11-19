@@ -12,10 +12,8 @@ export default function GameShapes() {
       )}>
       <section
         className={clsx(
-          `max-w-[25rem] flex flex-wrap justify-center items-center`,
-          battleStarted
-            ? "gap-x-[4rem] gap-y-[5rem]"
-            : "gap-x-[3rem] gap-y-[2.5rem]"
+          `max-w-[25rem] flex flex-wrap justify-center items-center gap-x-[3rem]`,
+          battleStarted ? "gap-y-[5rem]" : "gap-y-[2.5rem]"
         )}>
         {battleStarted ? <BattlePhase /> : <PreBattlePhase />}
       </section>
