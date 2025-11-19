@@ -15,7 +15,9 @@ export default function GameShapeItem({ shapeData, size }) {
   };
   return (
     <section
-      className={` border-16 ${
+      className={`${
+        btnSizes[size]
+      } flex justify-center items-center border-16 ${
         borderColors[shapeData.name]
       } aspect-square bg-white rounded-full`}>
       <button
