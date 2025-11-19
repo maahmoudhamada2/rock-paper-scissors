@@ -15,13 +15,11 @@ export default function GameShapeItem({ shapeData, size }) {
   };
   return (
     <section
-      className={`${
-        btnSizes[size]
-      } flex justify-center items-center border-16 ${
+      className={`${btnSizes[size]}  border-16 ${
         borderColors[shapeData.name]
       } aspect-square bg-white rounded-full`}>
       <button
-        className="rounded-full aspect-square flex items-center justify-center"
+        className="flex justify-center items-center rounded-full aspect-square flex items-center justify-center"
         disabled={battleStarted}
         id={shapeData.id}
         onClick={(e) => updateBattlePhase(e)}
