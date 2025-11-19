@@ -19,7 +19,7 @@ export default function GameShapeItem({ shapeData, size }) {
         borderColors[shapeData.name]
       } aspect-square bg-white rounded-full`}>
       <button
-        className="w-full h-full flex items-center justify-center"
+        className="w-full h-full rounded-full aspect-square flex items-center justify-center"
         disabled={battleStarted}
         id={shapeData.id}
         onClick={(e) => updateBattlePhase(e)}
