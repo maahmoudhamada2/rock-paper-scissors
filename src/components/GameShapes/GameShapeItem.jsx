@@ -15,7 +15,7 @@ export default function GameShapeItem({ shapeData, size }) {
   };
   return (
     <section
-      className={`w-[8rem] border-16 ${
+      className={` border-16 ${
         borderColors[shapeData.name]
       } aspect-square bg-white rounded-full`}>
       <button
