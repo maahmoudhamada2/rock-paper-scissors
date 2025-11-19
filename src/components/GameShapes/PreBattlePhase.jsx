@@ -6,9 +6,9 @@ export default function PreBattlePhase() {
   const shapesData = useGameData((state) => state.shapes);
   return (
     <>
-      <div>
+      {/* <div>
         <BgTriangle />
-      </div>
+      </div> */}
       {shapesData.map((shape) => (
         <GameShapeItem key={shape.id} shapeData={shape} size="sm" />
       ))}
