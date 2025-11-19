@@ -5,7 +5,7 @@ export default function ResultStatus() {
   const resultStatus = useGameData((state) => state.resultStatus);
   const resetBattlePhase = useGameData((state) => state.resetBattlePhase);
   return (
-    <section className="flex flex-col items-center gap-2">
+    <section>
       <p className="text-[2.5rem] font-bold text-white pb-[0.5rem] sm:text-[2rem]">
         {resultStatus}
       </p>
