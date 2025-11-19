@@ -21,7 +21,9 @@ html,
 body,
 #root {
     @apply h-full;
-    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%))
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
+    overflow-y: hidden;
+    max-height: 100dvh;
 }
 
 
