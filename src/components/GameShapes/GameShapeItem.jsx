@@ -1,6 +1,6 @@
 import useGameData from "../../store/useGameData";
 
-export default function GameShapeItem({ shapeData, size }) {
+export default function GameShapeItem({ shapeData, position }) {
   const updateBattlePhase = useGameData((state) => state.updateBattlePhase);
   const battleStarted = useGameData((state) => state.battleStarted);
 
@@ -9,23 +9,20 @@ export default function GameShapeItem({ shapeData, size }) {
     scissors: "border-gold-500",
     rock: "border-red-600",
   };
-  const btnSizes = {
-    sm: "w-[8rem]",
-    lg: "w-[9rem]",
-  };
+
   return (
-    <section
-      className={`${btnSizes[size]}  border-16 ${
+    <div
+      className={`bg-white rounded-full apsect-square  border-18 ${
         borderColors[shapeData.name]
-      } aspect-square bg-white rounded-full z-1`}>
+      } ${position}`}>
       <button
-        className="flex justify-center items-center rounded-full aspect-square flex items-center justify-center"
+        className="w-full h-full flex justify-center items-center aspect-square rounded-full"
         disabled={battleStarted}
         id={shapeData.id}
         onClick={(e) => updateBattlePhase(e)}
         type="button">
         <shapeData.icon />
       </button>
-    </section>
+    </div>
   );
 }
