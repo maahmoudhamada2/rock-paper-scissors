@@ -1,8 +1,8 @@
 export default function Footer({ onLoadRules }) {
   return (
-    <footer>
+    <footer className="flex justify-center items-center">
       <button
-        className="px-6 py-2 text-[0.75rem] text-white font-semibold tracking-wider border-2 border-gray-600 rounded-[9px]"
+        className="text-[0.7rem] font-semibold px-4 py-2 tracking-[0.2rem] text-white border-2 border-gray-600 rounded-lg"
         onClick={onLoadRules}>
         RULES
       </button>

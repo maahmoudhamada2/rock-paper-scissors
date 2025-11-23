@@ -15,20 +15,26 @@ export default function BattlePhase() {
     return () => clearTimeout(timeOutId);
   }, []);
   return (
-    <>
-      <section className="flex flex-col justify-center items-center gap-4">
-        <GameShapeItem shapeData={playerChoice} size="lg" />
-        <p className="text-[0.8rem] text-white font-bold">YOU PICKED</p>
+    <div className="grid grid-cols-4 gap-16 pt-[4rem]">
+      <section className="row-start-1 row-end-1 col-start-1 col-span-2 flex flex-col items-center gap-4">
+        <GameShapeItem shapeData={playerChoice} />
+        <p className="text-[clamp(0.8rem,3vw,2rem)] text-white font-bold">
+          YOU PICKED
+        </p>
       </section>
-      <section className="flex flex-col justify-center items-center gap-4">
+      <section className="row-start-1 row-end-1 col-start-3 col-span-2 flex flex-col items-center gap-4">
         {showResult ? (
-          <GameShapeItem shapeData={computerChoice} size="lg" />
+          <GameShapeItem shapeData={computerChoice} />
         ) : (
-          <div className="w-32 aspect-square rounded-full bg-[#182844]"></div>
+          <div className="w-full aspect-square bg-red-600 rounded-full"></div>
         )}
-        <p className="text-[0.8rem] text-white font-bold">THE HOUSE PICKED</p>
+        <p className="text-[clamp(0.8rem,3vw,2rem)] text-white font-bold">
+          THE HOUSE PICKED
+        </p>
       </section>
-      {showResult && <ResultStatus />}
-    </>
+      <section className="row-start-2 row-end-2 col-start-1 col-span-4 flex flex-col items-center gap-[1.5rem]">
+        {showResult && <ResultStatus />}
+      </section>
+    </div>
   );
 }
