@@ -12,7 +12,7 @@ export default function PreBattlePhase() {
   };
 
   return (
-    <>
+    <div className="grid grid-cols-4 gap-[2rem] p-[2rem] self-center">
       {/* <div>
         <BgTriangle />
       </div> */}
@@ -23,6 +23,6 @@ export default function PreBattlePhase() {
           position={shapePos[shape.name]}
         />
       ))}
-    </>
+    </div>
   );
 }
