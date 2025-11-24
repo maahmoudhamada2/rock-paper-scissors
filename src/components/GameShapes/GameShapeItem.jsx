@@ -16,7 +16,7 @@ export default function GameShapeItem({ shapeData, position }) {
         borderColors[shapeData.name]
       } ${position} inset-shadow-choose-btn`}>
       <button
-        className="w-full h-full rounded-full aspect-square flex justify-center items-center"
+        className=" flex justify-center items-center"
         disabled={battleStarted}
         id={shapeData.id}
         onClick={(e) => updateBattlePhase(e)}
