@@ -12,11 +12,11 @@ export default function GameShapeItem({ shapeData, position }) {
 
   return (
     <div
-      className={`z-1  aspect-square rounded-full bg-white border-[clamp(15px,4vw,18px)] ${
+      className={`bg-white rounded-full aspect-square border-12 ${
         borderColors[shapeData.name]
-      } ${position} inset-shadow-choose-btn`}>
+      }`}>
       <button
-        className="w-full h-full rounded-full aspect-square flex justify-center items-center"
+        className="bg-blue-600 rounded-full w-full h-full flex justify-center items-center"
         disabled={battleStarted}
         id={shapeData.id}
         onClick={(e) => updateBattlePhase(e)}
