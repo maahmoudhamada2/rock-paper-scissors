@@ -10,7 +10,7 @@ export default function ResultStatus() {
         {resultStatus}
       </p>
       <button
-        className="bg-white rounded-lg px-[clamp(1.5rem,15vw,3.5rem)] px-[1rem] py-[0.5rem]"
+        className="bg-white rounded-lg px-[clamp(1.5rem,25vw,3.5rem)] py-[0.7rem]"
         onClick={resetBattlePhase}>
         PLAY AGAIN
       </button>
