@@ -6,8 +6,13 @@ export default function GameShapes() {
   const battleStarted = useGameData((state) => state.battleStarted);
 
   return (
-    <main className=" flex justify-center  flex-1">
-      {battleStarted ? <BattlePhase /> : <PreBattlePhase />}
+    <main className="w-full flex justify-center  flex-1">
+      {/* {battleStarted ? <BattlePhase /> : <PreBattlePhase />} */}
+      <div className="w-full grid-container">
+        <section className="grid-items item-one"></section>
+        <section className="grid-items item-two"></section>
+        <section className="grid-items item-three"></section>
+      </div>
     </main>
   );
 }
