@@ -12,9 +12,9 @@ export default function PreBattlePhase() {
   };
   return (
     <div className="bg-red-600 relative w-[clamp(14rem,100%,23rem)] grid grid-cols-4 gap-x-[2rem] gap-y-[2rem] self-center">
-      <div className="w-[80%] h-[60%] absolute top-[50%] left-[50%] translate-[-50%]">
+      {/* <div className="w-[80%] h-[60%] absolute top-[50%] left-[50%] translate-[-50%]">
         <BgTriangle />
-      </div>
+      </div> */}
       {shapesData.map((shape) => (
         <GameShapeItem
           key={shape.id}
