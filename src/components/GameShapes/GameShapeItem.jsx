@@ -14,7 +14,7 @@ export default function GameShapeItem({ shapeData, position }) {
     <div
       className={`w-full bg-white rounded-full aspect-square border-12 ${
         borderColors[shapeData.name]
-      }`}>
+      } ${position}`}>
       <button
         className="w-full flex items-center justify-center rounded-full aspect-square "
         disabled={battleStarted}

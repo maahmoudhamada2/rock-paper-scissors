@@ -7,7 +7,9 @@ export default function GameShapes() {
 
   return (
     <main>
-      <div>{battleStarted ? <BattlePhase /> : <PreBattlePhase />}</div>
+      <div className="grid grid-cols-4 gap-[2rem]">
+        {battleStarted ? <BattlePhase /> : <PreBattlePhase />}
+      </div>
     </main>
   );
 }
