@@ -41,17 +41,5 @@ svg {
 .grid-items {
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: blue
-}
-
-.item-one {
-    grid-area: 1 / 1 / 1 /span 2;
-}
-
-.item-two {
-    grid-area: 1 / 3 / 1 /span2;
-}
-
-.item-three {
-    grid-area: 2/ 2 / 2 /span 2;
+    background-color: blue;
 }
