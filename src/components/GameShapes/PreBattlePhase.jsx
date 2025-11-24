@@ -12,7 +12,7 @@ export default function PreBattlePhase() {
   };
 
   return (
-    <div className="max-w-[24rem] grid grid-cols-4 gap-[2rem] p-[2rem] self-center">
+    <div className="max-w-[24rem] grid grid-cols-4 gap-[2rem] px-[2rem] self-center">
       {/* <div>
         <BgTriangle />
       </div> */}
