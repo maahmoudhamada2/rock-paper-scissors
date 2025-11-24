@@ -11,7 +11,7 @@ export default function PreBattlePhase() {
     rock: "row-start-2 col-start-2 row-end-2 col-span-2",
   };
   return (
-    <div className="relative w-[clamp(14rem,50vw,20rem)] grid grid-cols-4 gap-x-[2rem] gap-y-[2rem] self-center">
+    <div className="border-2 relative w-[clamp(14rem,50vw,20rem)] grid grid-cols-4 gap-x-[2rem] gap-y-[2rem] self-center">
       <div className="w-[80%] h-[60%] absolute top-[50%] left-[50%] translate-[-50%]">
         <BgTriangle />
       </div>
