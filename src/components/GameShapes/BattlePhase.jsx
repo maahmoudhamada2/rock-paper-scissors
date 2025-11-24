@@ -15,7 +15,7 @@ export default function BattlePhase() {
     return () => clearTimeout(timeOutId);
   }, []);
   return (
-    <div className="grid grid-cols-4 gap-16 pt-[4rem]">
+    <div className="grid grid-cols-4 pt-[4rem]">
       <section className="row-start-1 row-end-1 col-start-1 col-span-2 flex flex-col items-center gap-4">
         <GameShapeItem shapeData={playerChoice} />
         <p className="text-[clamp(0.8rem,3vw,2rem)] text-white font-bold">
