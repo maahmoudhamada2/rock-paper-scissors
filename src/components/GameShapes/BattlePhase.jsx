@@ -32,7 +32,7 @@ export default function BattlePhase() {
           HOUSE PICKED
         </p>
       </section>
-      <section className="w-full flex flex-col items-center gap-[0.5rem]">
+      <section className="w-full flex flex-col justify-center items-center gap-[0.5rem]">
         {showResult && <ResultStatus />}
       </section>
     </div>
