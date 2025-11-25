@@ -6,11 +6,11 @@ export default function ResultStatus() {
   const resetBattlePhase = useGameData((state) => state.resetBattlePhase);
   return (
     <>
-      <p className="text-white text-[clamp(1rem,20vw,2.5rem)] font-bold">
+      <p className="text-white text-[2.5rem] sm:text-[2.9rem] font-bold">
         {resultStatus}
       </p>
       <button
-        className="bg-white rounded-lg px-[clamp(1rem,20vw,4rem)] py-[0.5rem]"
+        className="bg-white rounded-lg px-[3rem] py-[0.5rem] sm:px-[5rem] sm:py-[1rem]"
         onClick={resetBattlePhase}>
         PLAY AGAIN
       </button>
