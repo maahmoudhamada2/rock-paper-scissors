@@ -15,14 +15,14 @@ export default function BattlePhase() {
     return () => clearTimeout(timeOutId);
   }, []);
   return (
-    <div className="flex flex-wrap justify-between pt-[1.5rem] px-[1rem] gap-y-[1.5rem]">
-      <section className="w-[45%] flex flex-col items-center gap-[0.7rem]">
+    <div className="flex flex-wrap justify-between pt-[1.5rem] pb-[0.5rem] px-[1rem] gap-y-[1.5rem]">
+      <section className="w-[45%]  flex flex-col items-center gap-[0.7rem]">
         <GameShapeItem shapeData={playerChoice} />
         <p className="text-[clamp(0.8rem,3vw,1.5rem)] text-white font-bold">
           YOU PICKED
         </p>
       </section>
-      <section className="w-[45%] flex flex-col items-center gap-[0.7rem]">
+      <section className="w-[45%]  flex flex-col items-center gap-[0.7rem]">
         {showResult ? (
           <GameShapeItem shapeData={computerChoice} />
         ) : (

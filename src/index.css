@@ -15,6 +15,7 @@
     --color-gray-600: hsl(246, 11%, 37%);
     --inset-shadow-choose-btn: inset 0px 4px 2px 2px #0000003b;
     --inset-shadow-testing: inset 0px -6px 0px 0px #00000040;
+    --breakpoint-xs: 375px;
 }
 
 html,
