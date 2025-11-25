@@ -13,8 +13,8 @@ export default function PreBattlePhase() {
 
   return (
     <div className="relative max-w-[24rem] grid grid-cols-4 gap-[2rem] px-[2rem] self-center">
-      <div className="w-full h-full absolute top-0 left-0">
-        <BgTriangle className="w-[15rem]" />
+      <div className="w-full h-full absolute flex justify-center items-center">
+        <BgTriangle className="w-[clamp(10rem,10vw,15rem)]" />
       </div>
       {shapesData.map((shape) => (
         <GameShapeItem
