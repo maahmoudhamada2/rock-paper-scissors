@@ -12,7 +12,7 @@ export default function PreBattlePhase() {
   };
 
   return (
-    <div className="grid grid-cols-[repeat(4,clamp(1rem,13vw,4rem))] gap-[2rem]">
+    <div className="grid grid-cols-[repeat(4,clamp(1rem,10vw,3rem))] gap-[2rem]">
       {/* <div>
         <BgTriangle />
       </div> */}
