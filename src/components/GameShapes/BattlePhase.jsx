@@ -16,7 +16,7 @@ export default function BattlePhase() {
   }, []);
 
   return (
-    <div className="h-full grid grid-cols-4 gap-6 items-start">
+    <div className="w-full h-full grid grid-cols-4 gap-6 items-start">
       <section className="flex flex-col items-center aspect-square row-start-1 row-end-1 col-start-1 col-span-2">
         <GameShapeItem shapeData={playerChoice} />
         <p className="font-bold text-white text-[0.5rem]">YOU PICKED</p>
