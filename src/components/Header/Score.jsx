@@ -8,7 +8,7 @@ export default function Score() {
       <h1 className="font-bold text-[clamp(0.6rem,3vw,0.7rem)] text-blue-700 tracking-wider">
         SCORE
       </h1>
-      <p className="font-bold text-[clamp(1.7rem,12vw,3rem)] text-navy-900">
+      <p className="font-bold text-[clamp(1.7rem,14vw,3rem)] text-navy-900">
         {score}
       </p>
     </section>
