@@ -20,6 +20,8 @@
 html,
 body,
 #root {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
     font-family: "Barlow Semi Condensed", sans-serif;
     line-height: 1.2;
