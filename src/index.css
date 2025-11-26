@@ -20,12 +20,16 @@
 html,
 body,
 #root {
-    @apply min-h-dvh;
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
     font-family: "Barlow Semi Condensed", sans-serif;
     line-height: 1.2;
+    height: 100%
 }
 
+
+#root {
+    min-height: 100dvh;
+}
 
 svg {
     pointer-events: none;
