@@ -18,7 +18,8 @@
 }
 
 html,
-body {
+body,
+#root {
     @apply h-full;
     background-color: #172142;
     font-family: "Barlow Semi Condensed", sans-serif;
@@ -28,7 +29,7 @@ body {
 
 
 #root {
-    /* @apply min-h-svh */
+    @apply min-h-svh
 }
 
 svg {
