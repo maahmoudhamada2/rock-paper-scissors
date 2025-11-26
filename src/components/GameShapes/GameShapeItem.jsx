@@ -12,7 +12,7 @@ export default function GameShapeItem({ shapeData, position }) {
 
   return (
     <div
-      className={`w-full h-full rounded-full border-12 ${
+      className={`z-1 w-full h-full rounded-full border-12 ${
         borderColors[shapeData.name]
       } bg-white aspect-square ${position}`}>
       <button
