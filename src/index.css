@@ -27,7 +27,9 @@ body {
 }
 
 
-#root {}
+#root {
+    /* @apply min-h-svh */
+}
 
 svg {
     pointer-events: none;
