@@ -5,9 +5,5 @@ import clsx from "clsx";
 export default function GameShapes() {
   const battleStarted = useGameData((state) => state.battleStarted);
 
-  return (
-    <main className="flex-1 flex">
-      {battleStarted ? <BattlePhase /> : <PreBattlePhase />}
-    </main>
-  );
+  return <main>{battleStarted ? <BattlePhase /> : <PreBattlePhase />}</main>;
 }

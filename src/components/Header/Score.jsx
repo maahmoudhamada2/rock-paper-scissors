@@ -4,11 +4,11 @@ export default function Score() {
   const score = useGameData((state) => state.score);
 
   return (
-    <section className="bg-white flex flex-col items-center justify-end rounded-lg aspect-2/1 px-[1.5rem] py-[0.7rem] sm:px-[2rem] sm:py-[0.7rem] leading-[1.2]">
-      <h1 className="text-[0.6rem] sm:text-[0.8rem] text-blue-700 font-bold">
+    <section className="leading-[1.1] px-[clamp(1.5rem,3vw,2.5rem)] pb-[clamp(0.3rem,1vh,0.6rem)] pt-[clamp(0.5rem,3vh,0.7rem)] flex flex-col items-center justify-center bg-white rounded-lg">
+      <h1 className="font-bold text-[clamp(0.6rem,3vw,0.7rem)] text-blue-700 tracking-wider">
         SCORE
       </h1>
-      <p className="text-[2.1rem] sm:text-[3.2rem] text-navy-900 font-bold">
+      <p className="font-bold text-[clamp(1.7rem,12vw,3rem)] text-navy-900">
         {score}
       </p>
     </section>

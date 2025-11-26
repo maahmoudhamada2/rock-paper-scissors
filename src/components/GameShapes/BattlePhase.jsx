@@ -15,26 +15,20 @@ export default function BattlePhase() {
     return () => clearTimeout(timeOutId);
   }, []);
   return (
-    <div className="flex flex-wrap justify-between pt-[1.5rem] px-[1rem] gap-y-[1.5rem] sm:pt-[4rem]">
-      <section className="w-[45%]  flex flex-col items-center gap-[0.7rem]">
+    <div>
+      <section>
         <GameShapeItem shapeData={playerChoice} />
-        <p className="text-[clamp(0.8rem,3vw,1.5rem)] text-white font-bold">
-          YOU PICKED
-        </p>
+        <p>YOU PICKED</p>
       </section>
-      <section className="w-[45%]  flex flex-col items-center gap-[0.7rem]">
+      <section>
         {showResult ? (
           <GameShapeItem shapeData={computerChoice} />
         ) : (
-          <div className="w-full rounded-full aspect-square bg-[#172240]"></div>
+          <div></div>
         )}
-        <p className="text-[clamp(0.8rem,3vw,1.5rem)] text-white font-bold">
-          HOUSE PICKED
-        </p>
+        <p>HOUSE PICKED</p>
       </section>
-      <section className="w-full flex flex-col  items-center gap-[0.5rem]">
-        {showResult && <ResultStatus />}
-      </section>
+      <section>{showResult && <ResultStatus />}</section>
     </div>
   );
 }
