@@ -6,7 +6,9 @@ export default function ResultStatus() {
   const resetBattlePhase = useGameData((state) => state.resetBattlePhase);
   return (
     <>
-      <p className="text-[8vw] font-bold text-white">{resultStatus}</p>
+      <p className="text-[clamp(1rem,11vw,4.5rem)] font-bold text-white">
+        {resultStatus}
+      </p>
       <button
         className="rounded-lg px-[11vw] py-[2vh] bg-white"
         onClick={resetBattlePhase}>
