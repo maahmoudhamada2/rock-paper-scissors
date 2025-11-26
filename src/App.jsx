@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <>
-      <article className="relative min-h-svh flex flex-col items-center ">
+      <article className="relative min-h-svh flex flex-col items-center p-4">
         <Header />
         <GameShapes />
         <Footer onLoadRules={updateShowRules} />

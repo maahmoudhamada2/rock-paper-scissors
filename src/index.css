@@ -20,7 +20,7 @@
 html,
 body {
     @apply h-full;
-    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
+    background-color: #172142;
     font-family: "Barlow Semi Condensed", sans-serif;
     line-height: 1.2;
 
