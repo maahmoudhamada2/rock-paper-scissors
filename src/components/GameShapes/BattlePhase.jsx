@@ -16,20 +16,24 @@ export default function BattlePhase() {
   }, []);
 
   return (
-    <div className="w-full h-full grid grid-cols-4 gap-x-[2rem] pt-[2rem] justify-items-center justify-between">
-      <section className="w-[clamp(2rem,35vw,12rem)] flex flex-col items-center gap-[1rem] aspect-square row-start-1 row-end-1 col-start-1 col-span-2">
+    <div className="w-full pt-[clamp(1rem,3vh,5rem)] grid grid-cols-4  gap-x-[2rem] items-center content-between justify-items-center self-start gap-y-[clamp(1rem,45%,10rem)] ">
+      <section className="w-[clamp(7rem,25vw,12rem)] flex flex-col items-center gap-[1rem] aspect-square row-start-1 row-end-1 col-start-1 col-span-2">
         <GameShapeItem shapeData={playerChoice} />
-        <p className="font-bold text-white text-[3vw]">YOU PICKED</p>
+        <p className="font-bold text-white text-[clamp(0.8rem,3vw,1.3rem)]">
+          YOU PICKED
+        </p>
       </section>
-      <section className="w-[clamp(2rem,35vw,12rem)] flex flex-col items-center gap-[1rem] aspect-square row-start-1 row-end-1 col-start-3 col-span-2">
+      <section className="w-[clamp(7rem,25vw,12rem)] flex flex-col items-center gap-[1rem] aspect-square row-start-1 row-end-1 col-start-3 col-span-2">
         {showResult ? (
           <GameShapeItem shapeData={computerChoice} />
         ) : (
           <div className="w-full aspect-square rounded-full bg-[#182844] "></div>
         )}
-        <p className="font-bold text-white text-[3vw]">HOUSE PICKED</p>
+        <p className="font-bold text-white text-[clamp(0.8rem,3vw,1.3rem)]">
+          HOUSE PICKED
+        </p>
       </section>
-      <section className="w-full flex flex-col justify-center items-center gap-[1.1vh] row-start-2 row-end-2 col-start-1 col-span-4">
+      <section className="flex flex-col justify-center items-center gap-[1.1vh] row-start-2 row-end-2 col-start-1 col-span-4">
         {showResult && <ResultStatus />}
       </section>
     </div>

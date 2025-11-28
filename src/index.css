@@ -28,7 +28,7 @@ body,
 
 
 #root {
-    @apply min-h-svh
+    @apply h-full min-h-svh;
 }
 
 svg {
