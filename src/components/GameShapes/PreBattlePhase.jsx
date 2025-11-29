@@ -12,7 +12,7 @@ export default function PreBattlePhase() {
   };
 
   return (
-    <div className="relative mx-auto grid grid-cols-[repeat(4,clamp(1rem,10vw,3rem))] gap-[2rem]">
+    <div className="relative mx-auto grid grid-cols-[repeat(4,clamp(1rem,10vw,3rem))] gap-x-[2.5rem] gap-y-[1.2rem]">
       <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
         <BgTriangle className="w-[70%] h-[60%]" />
       </div>
