@@ -6,7 +6,7 @@ export default function ResultStatus() {
   const resetBattlePhase = useGameData((state) => state.resetBattlePhase);
   return (
     <>
-      <p className="text-white font-bold text-[clamp(2rem,6vw,6rem)] tracking-[0.3rem] sm:text-[clamp(2rem,13vw,6rem)]">
+      <p className="text-white font-bold text-[clamp(2rem,6vw,6rem)] tracking-[0.3rem] sm:text-[clamp(2rem,10vw,6rem)]">
         {resultStatus}
       </p>
       <button
