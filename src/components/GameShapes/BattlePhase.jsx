@@ -16,14 +16,14 @@ export default function BattlePhase() {
   }, []);
 
   return (
-    <div className="w-full h-full pt-[5vh] sm:h-[90%] sm:pt-[5vh] flex flex-wrap justify-between content-between self-start">
-      <section className="w-[clamp(6rem,40%,12rem)] flex flex-col items-center gap-4 aspect-square">
+    <div className="h-[50vh] flex flex-wrap content-between justify-center gap-x-[10vw] gap-y-[7vw] md:gap-0">
+      <section className="w-[clamp(2rem,40vw,10rem)] flex flex-col items-center gap-4 md:order-1">
         <GameShapeItem shapeData={playerChoice} />
         <p className="font-bold text-white text-[clamp(0.8rem,3vw,3rem)]">
           YOU PICKED
         </p>
       </section>
-      <section className="w-[clamp(6rem,40%,12rem)] flex flex-col items-center gap-4 aspect-square">
+      <section className="w-[clamp(2rem,40vw,10rem)] flex flex-col items-center gap-4 md:order-3">
         {showResult ? (
           <GameShapeItem shapeData={computerChoice} />
         ) : (
@@ -33,7 +33,7 @@ export default function BattlePhase() {
           HOUSE PICKED
         </p>
       </section>
-      <section className="w-full flex flex-col justify-center items-center">
+      <section className="w-full flex flex-col  items-center md:w-auto md:order-2">
         {showResult && <ResultStatus />}
       </section>
     </div>
