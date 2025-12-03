@@ -16,7 +16,7 @@ export default function BattlePhase() {
   }, []);
 
   return (
-    <div className="h-[56vh] sm:h-[60vh] md:h-full flex flex-wrap content-between justify-evenly gap-x-[10vw] gap-y-[7vw] md:flex-nowrap md:items-center">
+    <div className="h-[56vh] sm:h-[60vh] flex flex-wrap content-between justify-evenly gap-x-[10vw] gap-y-[7vw] md:flex-nowrap ">
       <section className="w-[clamp(2rem,40vw,14rem)] flex flex-col items-center gap-4 md:flex-col-reverse md:order-1">
         <GameShapeItem shapeData={playerChoice} />
         <p className="font-bold text-white text-[clamp(0.8rem,3vw,1rem)]">
