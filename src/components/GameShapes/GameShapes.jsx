@@ -6,7 +6,7 @@ export default function GameShapes() {
   const battleStarted = useGameData((state) => state.battleStarted);
 
   return (
-    <main className="w-full flex-1 flex items-center justify-center md:pt-[4rem]">
+    <main className="w-full py-[1rem] flex-1 flex items-center justify-center md:pt-[4rem]">
       {battleStarted ? <BattlePhase /> : <PreBattlePhase />}
     </main>
   );
