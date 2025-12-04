@@ -46,4 +46,5 @@ svg {
     top: -8px;
     left: 0;
     box-shadow: 0 8px 0 0 #0000003b;
+    pointer-events: none;
 }
