@@ -12,10 +12,10 @@ export default function PreBattlePhase() {
   };
 
   return (
-    <div className="grid grid-cols-4">
-      {/* <div>
-        <BgTriangle />
-      </div> */}
+    <div className="relative grid grid-cols-[repeat(4,clamp(1.5rem,12vw,4rem))] gap-x-[2.5rem] gap-y-[1.5rem]">
+      <div className="w-full h-full flex justify-center items-center absolute top-0 left-0">
+        <BgTriangle className="w-[68%]" />
+      </div>
       {shapesData.map((shape) => (
         <GameShapeItem
           key={shape.id}

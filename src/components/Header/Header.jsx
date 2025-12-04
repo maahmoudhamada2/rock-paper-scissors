@@ -3,7 +3,7 @@ import Score from "./Score";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center border-3 border-gray-600 rounded-lg p-4">
+    <header className="w-full max-w-[40rem] flex justify-between items-center border-3 border-gray-600 rounded-lg p-2">
       <Logo className="max-h-[7rem]" />
       <Score />
     </header>
