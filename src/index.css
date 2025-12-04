@@ -37,16 +37,13 @@ svg {
     pointer-events: none;
 }
 
-.myClass {}
-
-.myClass::after {
-    content: "";
+.myClass {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    transform: scale(1.1);
+    aspect-ratio: 1 /1;
     position: absolute;
-    top: 0;
+    top: -8px;
     left: 0;
-    box-shadow: 0 7px 0 0 #0000003b;
+    box-shadow: 0 8px 0 0 #0000003b;
 }

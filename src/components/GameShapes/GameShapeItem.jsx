@@ -11,18 +11,21 @@ export default function GameShapeItem({ shapeData, position }) {
   };
 
   return (
-    <div
-      className={`inset-shadow-choose-btn z-1 w-full h-full bg-white rounded-full aspect-square border-[clamp(1rem,1.5vw,3rem)] ${
-        borderColors[shapeData.name]
-      } ${position}`}>
-      <button
-        className="w-full h-full flex justify-center items-center"
-        disabled={battleStarted}
-        id={shapeData.id}
-        onClick={(e) => updateBattlePhase(e)}
-        type="button">
-        <shapeData.icon />
-      </button>
+    <div className={`relative w-full h-full aspect-square ${position}`}>
+      <div
+        className={`inset-shadow-choose-btn z-1 w-full h-full bg-white rounded-full aspect-square border-[clamp(1rem,1.5vw,3rem)] ${
+          borderColors[shapeData.name]
+        }`}>
+        <button
+          className="w-full h-full flex justify-center items-center"
+          disabled={battleStarted}
+          id={shapeData.id}
+          onClick={(e) => updateBattlePhase(e)}
+          type="button">
+          <shapeData.icon />
+        </button>
+      </div>
+      <span className="myClass"></span>
     </div>
   );
 }
