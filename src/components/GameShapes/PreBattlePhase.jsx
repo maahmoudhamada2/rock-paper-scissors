@@ -12,10 +12,10 @@ export default function PreBattlePhase() {
   };
 
   return (
-    <div>
-      <div>
+    <div className="grid grid-cols-4">
+      {/* <div>
         <BgTriangle />
-      </div>
+      </div> */}
       {shapesData.map((shape) => (
         <GameShapeItem
           key={shape.id}
