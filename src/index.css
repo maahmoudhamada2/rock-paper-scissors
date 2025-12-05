@@ -25,7 +25,8 @@ body,
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
     font-family: "Barlow Semi Condensed", sans-serif;
     line-height: 1.2;
-    overflow: auto
+    overflow: auto;
+    overscroll-behavior: none;
 }
 
 
