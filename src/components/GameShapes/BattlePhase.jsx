@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import useGameData from "../../store/useGameData";
 import GameShapeItem from "./GameShapeItem";
 import ResultStatus from "./ResultStatus";
+import clsx from "clsx";
 
 export default function BattlePhase() {
   const { playerChoice, computerChoice } = useGameData(
@@ -16,12 +17,12 @@ export default function BattlePhase() {
   }, []);
 
   return (
-    <div className="self-start text-white w-full flex flex-wrap justify-between p-4">
-      <section className="w-[clamp(2rem,35vw,6rem)] flex flex-col items-center gap-4">
+    <div className="h-full flex flex-wrap justify-center content-around gap-x-[10vw] text-white self-start">
+      <section className="w-[clamp(2rem,35vw,10rem)] flex flex-col items-center gap-4">
         <GameShapeItem shapeData={playerChoice} />
         <p className="font-bold text-[clamp(0.7rem,2vw,1rem)]">YOU PICKED</p>
       </section>
-      <section className="w-[clamp(2rem,35vw,6rem)] flex flex-col items-center gap-4">
+      <section className="w-[clamp(2rem,35vw,10rem)] flex flex-col items-center gap-4">
         {showResult ? (
           <GameShapeItem shapeData={computerChoice} />
         ) : (
@@ -29,7 +30,7 @@ export default function BattlePhase() {
         )}
         <p className="font-bold  text-[clamp(0.7rem,2vw,1rem)]">HOUSE PICKED</p>
       </section>
-      <section className="w-full flex flex-col items-center gap-4">
+      <section className="w-[15rem] h-[5rem] flex flex-col items-center gap-2">
         {showResult && <ResultStatus />}
       </section>
     </div>
