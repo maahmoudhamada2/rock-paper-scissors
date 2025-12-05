@@ -17,14 +17,14 @@ export default function BattlePhase() {
   }, []);
 
   return (
-    <div className="w-full h-full whitespace-nowrap flex flex-wrap justify-center content-around gap-x-[10vw] text-white self-start md:flex-nowrap md:items-center md:gap-[5vw]">
-      <section className="w-[clamp(2rem,35vw,16rem)] flex flex-col items-center gap-4 md:flex-col-reverse md:order-1">
+    <div className="w-full h-full whitespace-nowrap flex flex-wrap justify-center content-around gap-x-[10vw] gap-y-[5vw] text-white self-start md:flex-nowrap md:items-center md:gap-[5vw]">
+      <section className="w-[clamp(2rem,35vw,10rem)] flex flex-col items-center gap-4 md:flex-col-reverse md:order-1">
         <GameShapeItem shapeData={playerChoice} />
         <p className="font-semibold text-[clamp(0.7rem,2vw,1.3rem)]">
           YOU PICKED
         </p>
       </section>
-      <section className="w-[clamp(2rem,35vw,16rem)] flex flex-col items-center gap-4 md:flex-col-reverse md:order-3">
+      <section className="w-[clamp(2rem,35vw,10rem)] flex flex-col items-center gap-4 md:flex-col-reverse md:order-3">
         {showResult ? (
           <GameShapeItem shapeData={computerChoice} />
         ) : (
