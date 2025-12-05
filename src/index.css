@@ -19,24 +19,15 @@
     --breakpoint-md: 640px;
 }
 
-/* html,
+html,
 body,
 #root {
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
     font-family: "Barlow Semi Condensed", sans-serif;
     line-height: 1.2;
-} */
-
-html,
-body {
-    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 48%, 15%));
-    /* height: 100vh */
 }
 
 
-#root {
-    height: 100%
-}
 
 svg {
     pointer-events: none;
