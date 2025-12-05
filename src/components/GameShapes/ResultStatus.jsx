@@ -7,7 +7,7 @@ export default function ResultStatus() {
     <>
       <p className="font-bold text-[clamp(2rem,8vw,4rem)]">{resultStatus}</p>
       <button
-        className="bg-white rounded-lg text-black px-[clamp(1rem,12vw,4rem)] py-[0.7rem]"
+        className="bg-white rounded-lg text-black px-[clamp(1rem,12vw,4rem)] py-[0.5rem] sm:py-[0.7rem]"
         onClick={resetBattlePhase}>
         PLAY AGAIN
       </button>

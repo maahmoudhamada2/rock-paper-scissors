@@ -30,7 +30,7 @@ export default function BattlePhase() {
         )}
         <p className="font-bold  text-[clamp(0.7rem,2vw,1rem)]">HOUSE PICKED</p>
       </section>
-      <section className="w-[15rem] h-[5rem] flex flex-col items-center gap-2">
+      <section className="w-[15rem] h-[5.5rem]  flex flex-col items-center gap-2">
         {showResult && <ResultStatus />}
       </section>
     </div>
