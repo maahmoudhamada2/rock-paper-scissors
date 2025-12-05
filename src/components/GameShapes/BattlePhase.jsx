@@ -26,7 +26,7 @@ export default function BattlePhase() {
         {showResult ? (
           <GameShapeItem shapeData={computerChoice} />
         ) : (
-          <div className="w-full h-full aspect-square rounded-full bg-yellow-200"></div>
+          <div className="w-full h-full aspect-square rounded-full bg-[#17213d]"></div>
         )}
         <p className="font-bold  text-[clamp(0.7rem,2vw,1rem)]">HOUSE PICKED</p>
       </section>
