@@ -48,7 +48,7 @@ svg {
 
 .rings {
     position: relative;
-    outline: 182px solid #ffffff05;
+    outline: 150px solid #ffffff05;
     border-radius: 50%;
 }
 
@@ -75,5 +75,5 @@ svg {
     top: 0;
     left: 0;
     transform: scale(1.36);
-    opacity: 5%
+    opacity: 3%
 }

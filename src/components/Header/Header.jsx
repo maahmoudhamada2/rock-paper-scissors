@@ -1,4 +1,4 @@
-import { Logo } from "../../icons";
+import { Logo, LogoBonus } from "../../icons";
 import Score from "./Score";
 
 export default function Header() {

@@ -44,7 +44,7 @@ const useGameData = create((set) => ({
 function winnerDecider(plChoice, compChoice, prevScore) {
     if (plChoice.name === compChoice.name) return ({ score: prevScore, status: "Draw" });
     else if (plChoice.loseAgainst[0] === compChoice.name) {
-        return { score: prevScore === 0 ? 0 : prevScore - 1, status: "YOU LOST" };
+        return { score: prevScore === 0 ? 0 : prevScore - 1, status: "YOU LOSE" };
     } else {
         return { score: prevScore + 1, status: "YOU WIN" };
     }

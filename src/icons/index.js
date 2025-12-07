@@ -5,5 +5,6 @@ import RockIcon from "./RockIcon";
 import ScissorsIcon from "./ScissorsIcon";
 import GameRulesImg from "./GameRulesImg";
 import Logo from "./Logo";
+import LogoBonus from "./LogoBonus";
 
-export { BgTriangle, CloseIcon, PaperIcon, RockIcon, ScissorsIcon, GameRulesImg, Logo }
+export { LogoBonus, BgTriangle, CloseIcon, PaperIcon, RockIcon, ScissorsIcon, GameRulesImg, Logo }

@@ -3,6 +3,7 @@ import GameShapes from "./components/GameShapes/GameShapes";
 import Footer from "./components/Footer/Footer";
 import GameRules from "./components/GameRules/GameRules";
 import useGameData from "./store/useGameData";
+import ChoosingVersion from "./ChoosingVersion";
 
 export default function App() {
   const showRules = useGameData((state) => state.showRules);
@@ -10,10 +11,11 @@ export default function App() {
 
   return (
     <>
-      <article className="overflow-auto h-screen flex flex-col items-center p-4">
-        <Header />
+      <article className="overflow-y-auto overflow-x-hidden h-screen flex flex-col items-center p-4">
+        {/* <Header />
         <GameShapes />
-        <Footer onLoadRules={updateShowRules} />
+        <Footer onLoadRules={updateShowRules} /> */}
+        <ChoosingVersion />
       </article>
       {showRules && <GameRules onLoadRules={updateShowRules} />}
     </>
