@@ -2,8 +2,8 @@ import { GameRulesImg, CloseIcon } from "../../icons/index";
 
 export default function GameRules({ onLoadRules }) {
   return (
-    <div className="z-3 w-full min-h-screen py-[2rem] bg-white flex justify-center items-center absolute top-0 left-0 md:bg-[#00000091]">
-      <article className="h-full p-8 flex flex-col items-center gap-[4rem] bg-white md:max-w-[18rem] md:h-[60%] md:rounded-2xl">
+    <div className="z-3 w-full h-full min-h-screen py-[20rem] bg-white flex justify-center items-center absolute top-0 left-0 md:bg-[#00000091]">
+      <article className="min-h-[25rem] p-8 flex flex-col justify-around items-center   bg-white md:max-w-[18rem] md:h-[60%] md:rounded-2xl">
         <header>
           <h1 className="font-bold text-navy-900 text-[clamp(1rem,10vw,2rem)]">
             RULES
