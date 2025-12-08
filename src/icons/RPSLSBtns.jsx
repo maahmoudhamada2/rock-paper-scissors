@@ -1,10 +1,7 @@
 const RPSLSBtns = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    // width={478}
-    // height={469}
-    // viewBox="0 0 478 469"
-    viewBox="0 0 481 436"
+    viewBox="0 0 500 500"
     fill="none"
     {...props}>
     <path
