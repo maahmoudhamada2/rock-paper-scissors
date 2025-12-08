@@ -22,7 +22,7 @@ export default function App() {
           <GameEdition />
         )}
       </article>
-      {showRules && <GameRules onLoadRules={updateShowRules} />}:
+      {showRules && <GameRules onLoadRules={updateShowRules} />}
     </>
   );
 }
