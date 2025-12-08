@@ -1,6 +1,6 @@
 import useGameData from "../../store/useGameData";
 import GameShapeItem from "./GameShapeItem";
-import { BgTriangle, ScissorsIcon } from "../../icons";
+import { BgPentagon, BgTriangle, ScissorsIcon } from "../../icons";
 
 export default function PreBattlePhase() {
   const shapesData = useGameData((state) => state.shapes);
@@ -15,6 +15,7 @@ export default function PreBattlePhase() {
     <div className="self-center relative grid grid-cols-[repeat(4,clamp(1.5rem,10vw,3rem))] gap-x-[2.5rem] gap-y-[1.5rem]">
       <div className="w-full h-full flex justify-center items-center absolute top-0 left-0">
         <BgTriangle className="w-[68%]" />
+        {/* <BgPentagon /> */}
       </div>
       {shapesData.map((shape) => (
         <GameShapeItem

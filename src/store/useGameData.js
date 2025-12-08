@@ -1,8 +1,11 @@
 import { create } from "zustand";
-import { PaperIcon, RockIcon, ScissorsIcon } from "../icons";
+import { PaperIcon, RockIcon, ScissorsIcon, LogoBonus, Logo, LizardIcon, SpockIcon, ClassicRules, RPSLSRules } from "../icons";
 import { produce } from "immer";
 
 const useGameData = create((set) => ({
+    editionChoosed: false,
+    EditionLogo: null,
+    RulesModal: null,
     score: 0,
     battleStarted: false,
     showResult: false,
@@ -13,33 +16,67 @@ const useGameData = create((set) => ({
         playerChoice: {},
         computerChoice: {},
     },
-    shapes: [
-        {
-            id: 1,
-            name: 'paper',
-            loseAgainst: ['scissors'],
-            icon: PaperIcon,
-        },
 
-        {
-            id: 2,
-            name: 'scissors',
-            loseAgainst: ['rock'],
-            icon: ScissorsIcon,
-        },
-        {
-            id: 3,
-            name: 'rock',
-            loseAgainst: ['paper'],
-            icon: RockIcon,
-        },
-    ],
+    switchEdition: () => set(state => ({ ...state, editionChoosed: false })),
+    setupGameEdition: (edition) => set(state => setupEditionHelper(state, edition)),
     updateShowRules: () => set(state => ({ ...state, showRules: !state.showRules })),
     updateShowResult: () => set(state => updateShowResultHelper(state)),
     updateBattlePhase: (e) => set(state => BattlePhaseHelper(state, e)),
     resetBattlePhase: () => set(state => resetBattlePhaseHelper(state)),
 }))
 
+function setupEditionHelper(baseState, edition) {
+    const shapes = [
+        {
+            id: 1,
+            name: 'paper',
+            borderColor: 'border-blue-500',
+            loseAgainst: ['scissors'],
+            icon: PaperIcon,
+        },
+        {
+            id: 2,
+            name: 'scissors',
+            borderColor: 'border-gold-500',
+            loseAgainst: ['rock'],
+            icon: ScissorsIcon,
+        },
+        {
+            id: 3,
+            name: 'rock',
+            borderColor: 'border-red-600',
+            loseAgainst: ['paper'],
+            icon: RockIcon,
+        },
+        {
+            id: 4,
+            name: 'lizard',
+            borderColor: 'border-purple-700',
+            // loseAgainst: [],
+            icon: LizardIcon
+        },
+        {
+            id: 5,
+            name: 'spock',
+            borderColor: 'border-lightblue-500',
+            // loseAgainst: [],
+            icon: SpockIcon
+        }
+    ]
+    const nextState = produce(baseState, draft => {
+        draft.editionChoosed = true
+        if (edition === 'classic') {
+            draft.EditionLogo = Logo;
+            draft.RulesModal = ClassicRules
+            draft.shapes = shapes.slice(0, 3)
+        } else {
+            draft.EditionLogo = LogoBonus
+            draft.RulesModal = RPSLSRules
+            draft.shapes = shapes
+        }
+    })
+    return nextState;
+}
 
 function winnerDecider(plChoice, compChoice, prevScore) {
     if (plChoice.name === compChoice.name) return ({ score: prevScore, status: "Draw" });
