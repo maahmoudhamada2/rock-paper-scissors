@@ -5,9 +5,10 @@ export default function GameShapeItem({ shapeData, position }) {
   const battleStarted = useGameData((state) => state.battleStarted);
 
   return (
-    <div className={`relative w-full h-full aspect-square ${position}`}>
+    <div
+      className={`relative ${shapeData.position} z-1 bg-white rounded-full aspect-square`}>
       <div
-        className={`relative inset-shadow-choose-btn w-full h-full bg-white rounded-full aspect-square border-[clamp(1.2rem,3.5vw,1.5rem)] ${shapeData.borderColor}`}>
+        className={`inset-shadow-choose-btn w-full h-full rounded-full border-8 ${shapeData.borderColor}`}>
         <button
           className="w-full h-full flex justify-center items-center"
           disabled={battleStarted}

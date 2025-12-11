@@ -3,7 +3,7 @@ const ClassicBtns = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     // width={481}
     // height={436}
-    viewBox="0 0 481 436"
+    viewBox="0 0 500 500"
     fill="none"
     {...props}>
     <path

@@ -9,6 +9,7 @@ export default function App() {
   const showRules = useGameData((state) => state.showRules);
   const updateShowRules = useGameData((state) => state.updateShowRules);
   const editionChoosed = useGameData((state) => state.editionChoosed);
+  const myState = useGameData((state) => state);
   return (
     <>
       <article className="overflow-y-auto overflow-x-hidden h-screen flex flex-col items-center p-4">

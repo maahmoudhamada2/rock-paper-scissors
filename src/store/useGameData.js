@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { PaperIcon, RockIcon, ScissorsIcon, LogoBonus, Logo, LizardIcon, SpockIcon, ClassicRules, RPSLSRules } from "../icons";
+import { PaperIcon, RockIcon, ScissorsIcon, LogoBonus, Logo, LizardIcon, SpockIcon, ClassicRules, RPSLSRules, BgTriangle, BgPentagon } from "../icons";
 import { produce } from "immer";
 
 const useGameData = create((set) => ({
@@ -25,57 +25,59 @@ const useGameData = create((set) => ({
     resetBattlePhase: () => set(state => resetBattlePhaseHelper(state)),
 }))
 
-function setupEditionHelper(baseState, edition) {
+function Test(edition) {
+    const background = edition === 'classic' ? BgTriangle : BgPentagon;
     const shapes = [
         {
             id: 1,
             name: 'paper',
             borderColor: 'border-blue-500',
-            loseAgainst: ['scissors'],
+            loseAgainst: ['scissors', 'lizard'],
             icon: PaperIcon,
         },
         {
             id: 2,
             name: 'scissors',
             borderColor: 'border-gold-500',
-            loseAgainst: ['rock'],
+            loseAgainst: ['rock', 'spock'],
             icon: ScissorsIcon,
         },
         {
             id: 3,
             name: 'rock',
             borderColor: 'border-red-600',
-            loseAgainst: ['paper'],
+            loseAgainst: ['paper', 'spock'],
             icon: RockIcon,
         },
         {
             id: 4,
             name: 'lizard',
             borderColor: 'border-purple-700',
-            // loseAgainst: [],
-            icon: LizardIcon
+            loseAgainst: ['rock', 'scissors'],
+            icon: LizardIcon,
         },
         {
             id: 5,
             name: 'spock',
             borderColor: 'border-lightblue-500',
-            // loseAgainst: [],
-            icon: SpockIcon
+            loseAgainst: ['lizard', 'paper'],
+            icon: SpockIcon,
         }
     ]
+    return {
+        background: background,
+        shapes: edition === 'classic' ? shapes.slice(0, 3) : shapes
+    }
+}
+
+function setupEditionHelper(baseState, edition) {
     const nextState = produce(baseState, draft => {
-        draft.editionChoosed = true
-        if (edition === 'classic') {
-            draft.EditionLogo = Logo;
-            draft.RulesModal = ClassicRules
-            draft.shapes = shapes.slice(0, 3)
-        } else {
-            draft.EditionLogo = LogoBonus
-            draft.RulesModal = RPSLSRules
-            draft.shapes = shapes
-        }
+        draft.editionChoosed = true;
+        draft.EditionLogo = edition === 'classic' ? Logo : LogoBonus
+        draft.RulesModal = edition === 'classic' ? ClassicRules : RPSLSRules
+        draft.container = Test(edition);
     })
-    return nextState;
+    return nextState
 }
 
 function winnerDecider(plChoice, compChoice, prevScore) {
@@ -115,8 +117,8 @@ function resetBattlePhaseHelper(baseState) {
 
 function BattlePhaseHelper(baseState, e) {
     const nextState = produce(baseState, draft => {
-        const plShape = draft.shapes[Number(e.target.id) - 1]
-        const compShape = draft.shapes[Math.floor(Math.random() * 3)]
+        const plShape = draft.container.shapes[Number(e.target.id) - 1]
+        const compShape = draft.container.shapes[Math.floor(Math.random() * draft.container.shapes.length)]
         draft.battleStarted = true
         draft.battlePhase.computerChoice = compShape;
         draft.battlePhase.playerChoice = plShape;
