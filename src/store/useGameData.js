@@ -50,7 +50,7 @@ function Test(edition) {
             borderColor: 'border-red-600',
             loseAgainst: ['paper', 'spock'],
             icon: RockIcon,
-            position: edition === 'classic' ? null : 'row-start-12 col-start-9'
+            position: edition === 'classic' ? null : 'row-start-11 col-start-9'
         },
         {
             id: 4,
@@ -58,7 +58,7 @@ function Test(edition) {
             borderColor: 'border-purple-700',
             loseAgainst: ['rock', 'scissors'],
             icon: LizardIcon,
-            position: edition === 'classic' ? null : 'row-start-12 col-start-3'
+            position: edition === 'classic' ? null : 'row-start-11 col-start-3'
         },
         {
             id: 5,

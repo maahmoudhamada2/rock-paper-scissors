@@ -3,7 +3,7 @@ import GameShapes from "./components/GameShapes/GameShapes";
 import Footer from "./components/Footer/Footer";
 import GameRules from "./components/GameRules/GameRules";
 import useGameData from "./store/useGameData";
-import GameEdition from "./GameEdition";
+import GameEdition from "./GameEdition/GameEdition";
 
 export default function App() {
   const showRules = useGameData((state) => state.showRules);
