@@ -34,6 +34,7 @@ function Test(edition) {
             borderColor: 'border-blue-500',
             loseAgainst: ['scissors', 'lizard'],
             icon: PaperIcon,
+            position: edition === 'classic' ? null : 'row-start-5 col-start-11'
         },
         {
             id: 2,
@@ -41,6 +42,7 @@ function Test(edition) {
             borderColor: 'border-gold-500',
             loseAgainst: ['rock', 'spock'],
             icon: ScissorsIcon,
+            position: edition === 'classic' ? null : 'row-start-1 col-start-6'
         },
         {
             id: 3,
@@ -48,6 +50,7 @@ function Test(edition) {
             borderColor: 'border-red-600',
             loseAgainst: ['paper', 'spock'],
             icon: RockIcon,
+            position: edition === 'classic' ? null : 'row-start-12 col-start-9'
         },
         {
             id: 4,
@@ -55,6 +58,7 @@ function Test(edition) {
             borderColor: 'border-purple-700',
             loseAgainst: ['rock', 'scissors'],
             icon: LizardIcon,
+            position: edition === 'classic' ? null : 'row-start-12 col-start-3'
         },
         {
             id: 5,
@@ -62,6 +66,7 @@ function Test(edition) {
             borderColor: 'border-lightblue-500',
             loseAgainst: ['lizard', 'paper'],
             icon: SpockIcon,
+            position: edition === 'classic' ? null : 'row-start-5 col-start-1'
         }
     ]
     return {

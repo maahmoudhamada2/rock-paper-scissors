@@ -6,9 +6,9 @@ export default function GameShapeItem({ shapeData, position }) {
 
   return (
     <div
-      className={`relative ${shapeData.position} z-1 bg-white rounded-full aspect-square`}>
+      className={`relative ${shapeData.position} row-span-2 col-span-5 z-1 bg-white rounded-full aspect-square`}>
       <div
-        className={`inset-shadow-choose-btn w-full h-full rounded-full border-8 ${shapeData.borderColor}`}>
+        className={`inset-shadow-choose-btn w-full h-full rounded-full border-[clamp(1rem,1vw,2rem)] ${shapeData.borderColor}`}>
         <button
           className="w-full h-full flex justify-center items-center"
           disabled={battleStarted}

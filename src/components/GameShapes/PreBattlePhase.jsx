@@ -19,9 +19,9 @@ export default function PreBattlePhase() {
     //       position={shape.position}
     //     />
     //   ))}
-    <div className="max-w-[20rem] aspect-square grid grid-cols-15 grid-rows-15">
-      <div>
-        <container.background />
+    <div className="max-w-[25rem] aspect-square grid grid-cols-15 grid-rows-15">
+      <div className="row-start-3 col-start-2 row-span-12 col-span-13">
+        <container.background className="w-full h-full" />
       </div>
       {container.shapes.map((shape) => (
         <GameShapeItem key={shape.id} shapeData={shape} />
