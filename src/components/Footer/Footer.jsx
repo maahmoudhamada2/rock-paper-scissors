@@ -2,6 +2,7 @@ import useGameData from "../../store/useGameData";
 
 export default function Footer({ onLoadRules }) {
   const switchEdition = useGameData((state) => state.switchEdition);
+  const resetBattlePhase = useGameData((state) => state.resetBattlePhase);
   return (
     <footer className="w-full flex justify-center gap-2 md:justify-end md:py-[0.5rem]">
       <button
@@ -11,7 +12,10 @@ export default function Footer({ onLoadRules }) {
       </button>
       <button
         className="text-[0.9rem] border border-white text-white rounded-lg py-2 px-5"
-        onClick={switchEdition}>
+        onClick={() => {
+          resetBattlePhase();
+          switchEdition();
+        }}>
         SWITCH
       </button>
     </footer>

@@ -19,7 +19,7 @@ export default function PreBattlePhase() {
     //       position={shape.position}
     //     />
     //   ))}
-    <div className="max-w-[25rem] aspect-square grid grid-cols-15 grid-rows-15">
+    <div className="max-w-[20rem] aspect-square grid grid-cols-15 grid-rows-15">
       <div className="w-[86%] h-full row-start-2 col-start-3 row-span-13 col-span-13">
         <container.background className="w-full h-full" />
       </div>
