@@ -86,8 +86,9 @@ function setupEditionHelper(baseState, edition) {
 }
 
 function winnerDecider(plChoice, compChoice, prevScore) {
+    console.log(`DEBUG - WinnerDecider - ${plChoice.loseAgainst.includes(compChoice.name)}`)
     if (plChoice.name === compChoice.name) return ({ score: prevScore, status: "Draw" });
-    else if (plChoice.loseAgainst[0] === compChoice.name) {
+    else if (plChoice.loseAgainst.includes(compChoice.name)) {
         return { score: prevScore === 0 ? 0 : prevScore - 1, status: "YOU LOSE" };
     } else {
         return { score: prevScore + 1, status: "YOU WIN" };

@@ -8,7 +8,7 @@ export default function ModeCard({ title, desciption, Cover, id }) {
   };
   return (
     <article className="max-w-[20rem] border-[8px] border-[#38BDF8] rounded-2xl">
-      <header className="rounded-t-2xl bg-[radial-gradient(#1E293B,#0F172A)] p-8">
+      <header className="rounded-t-2xl bg-[radial-gradient(#1E293B,#0F172A)] px-8 pt-8">
         <Cover />
       </header>
       <main className="rounded-b-2xl p-4 flex flex-col items-center gap-[0.7rem] bg-[#0F172A]">
