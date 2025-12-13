@@ -3,7 +3,7 @@ import ModeCard from "./ModeCard";
 
 export default function ChossingEdition() {
   return (
-    <div className="w-full flex flex-col items-center  p-[1rem] pt-[2rem] gap-[2rem]">
+    <div className="w-full flex flex-col justify-center items-center  p-[1rem] pt-[2rem] gap-[2rem] md:h-full">
       <h1 className="text-[clamp(2.9rem,10vw,5rem)] text-[#38BDF8] font-[Bangers] leading-none whitespace-nowrap">
         Classic or Chaos
       </h1>
