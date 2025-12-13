@@ -4,7 +4,7 @@ import PanelFooter from "./PanelFooter/PanelFooter";
 
 export default function GamePanel() {
   return (
-    <article className="flex flex-col items-center p-4">
+    <article className="h-full flex flex-col items-center p-4">
       <PanelHeader />
       <PanelButtons />
       <PanelFooter />
