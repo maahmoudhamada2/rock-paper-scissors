@@ -1,6 +1,6 @@
-import useGameData from "../../store/useGameData";
+import useGameData from "../../../store/useGameData";
 
-export default function Score() {
+export default function GameScore() {
   const score = useGameData((state) => state.score);
 
   return (

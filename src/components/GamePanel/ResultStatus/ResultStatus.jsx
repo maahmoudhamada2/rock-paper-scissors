@@ -1,4 +1,4 @@
-import useGameData from "../../store/useGameData";
+import useGameData from "../../../store/useGameData";
 
 export default function ResultStatus() {
   const resultStatus = useGameData((state) => state.resultStatus);

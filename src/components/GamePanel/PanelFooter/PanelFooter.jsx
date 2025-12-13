@@ -1,6 +1,6 @@
-import useGameData from "../../store/useGameData";
+import useGameData from "../../../store/useGameData";
 
-export default function Footer({ onLoadRules }) {
+export default function PanelFooter({ onLoadRules }) {
   const switchEdition = useGameData((state) => state.switchEdition);
   const resetBattlePhase = useGameData((state) => state.resetBattlePhase);
   return (

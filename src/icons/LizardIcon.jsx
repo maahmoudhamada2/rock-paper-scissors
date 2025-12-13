@@ -3,7 +3,7 @@ const LizardIcon = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     width="50%"
     height="50%"
-    viewBox="0 0 49 59"
+    viewBox="0 0 62 60"
     {...props}>
     <path
       fill="#3B4262"

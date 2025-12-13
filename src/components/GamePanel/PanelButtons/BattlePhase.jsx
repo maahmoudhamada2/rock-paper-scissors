@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import useGameData from "../../store/useGameData";
-import GameShapeItem from "./GameShapeItem";
-import ResultStatus from "./ResultStatus";
-import clsx from "clsx";
+import useGameData from "../../../store/useGameData";
+import PanelBtnItem from "./PanelBtnItem";
+import ResultStatus from "../ResultStatus/ResultStatus";
 
 export default function BattlePhase() {
   const { playerChoice, computerChoice } = useGameData(
@@ -19,14 +18,14 @@ export default function BattlePhase() {
   return (
     <div className="w-full h-full whitespace-nowrap flex flex-wrap justify-center content-around gap-x-[10vw] gap-y-[5vw] text-white self-start md:flex-nowrap md:items-center md:gap-[5vw]">
       <section className="w-[clamp(2rem,35vw,10rem)] md:w-[clamp(3rem,40vw,15rem)] flex flex-col items-center gap-4 md:flex-col-reverse md:order-1">
-        <GameShapeItem shapeData={playerChoice} />
+        <PanelBtnItem shapeData={playerChoice} />
         <p className="z-1 font-semibold text-[clamp(0.7rem,2vw,1.3rem)]">
           YOU PICKED
         </p>
       </section>
       <section className="w-[clamp(2rem,35vw,10rem)] md:w-[clamp(3rem,40vw,15rem)] flex flex-col items-center gap-4 md:flex-col-reverse md:order-3">
         {showResult ? (
-          <GameShapeItem shapeData={computerChoice} />
+          <PanelBtnItem shapeData={computerChoice} />
         ) : (
           <div className="w-full h-full aspect-square rounded-full bg-[#17213d]"></div>
         )}

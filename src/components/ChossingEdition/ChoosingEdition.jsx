@@ -1,13 +1,13 @@
-import { ClassicBtns, RPSLSBtns } from "../icons";
+import { ClassicBtns, RPSLSBtns } from "../../icons";
 import ModeCard from "./ModeCard";
 
-export default function GameEdition() {
+export default function ChossingEdition() {
   return (
-    <div className="flex flex-col items-center gap-[2rem] pt-[2rem]">
-      <h1 className="text-[clamp(2.9rem,10vw,7rem)] text-[#38BDF8] font-[Bangers] leading-none">
+    <div className="w-full flex flex-col items-center  p-[1rem] pt-[2rem] gap-[2rem]">
+      <h1 className="text-[clamp(2.9rem,10vw,5rem)] text-[#38BDF8] font-[Bangers] leading-none whitespace-nowrap">
         Classic or Chaos
       </h1>
-      <div className="flex flex-col gap-[3rem] md:flex-row">
+      <div className="w-full flex flex-wrap justify-center items-stretch gap-[2rem] ">
         <ModeCard
           title={"Classic Edition"}
           desciption={

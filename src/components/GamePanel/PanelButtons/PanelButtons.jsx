@@ -1,7 +1,8 @@
-import useGameData from "../../store/useGameData";
+import useGameData from "../../../store/useGameData";
 import BattlePhase from "./BattlePhase";
 import PreBattlePhase from "./PreBattlePhase";
-export default function GameShapes() {
+
+export default function PanelButtons() {
   const battleStarted = useGameData((state) => state.battleStarted);
 
   return (

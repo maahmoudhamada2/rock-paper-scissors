@@ -3,7 +3,7 @@ import { PaperIcon, RockIcon, ScissorsIcon, LogoBonus, Logo, LizardIcon, SpockIc
 import { produce } from "immer";
 
 const useGameData = create((set) => ({
-    editionChoosed: false,
+    isChoosed: false,
     EditionLogo: null,
     RulesModal: null,
     score: 0,
@@ -13,11 +13,11 @@ const useGameData = create((set) => ({
     resultStatus: "",
 
     battlePhase: {
-        playerChoice: {},
-        computerChoice: {},
+        playerChoice: { winner: false },
+        computerChoice: { winner: false },
     },
 
-    switchEdition: () => set(state => ({ ...state, editionChoosed: false })),
+    switchEdition: () => set(state => ({ ...state, isChoosed: false })),
     setupGameEdition: (edition) => set(state => setupEditionHelper(state, edition)),
     updateShowRules: () => set(state => ({ ...state, showRules: !state.showRules })),
     updateShowResult: () => set(state => updateShowResultHelper(state)),
@@ -77,7 +77,7 @@ function Test(edition) {
 
 function setupEditionHelper(baseState, edition) {
     const nextState = produce(baseState, draft => {
-        draft.editionChoosed = true;
+        draft.isChoosed = true;
         draft.EditionLogo = edition === 'classic' ? Logo : LogoBonus
         draft.RulesModal = edition === 'classic' ? ClassicRules : RPSLSRules
         draft.container = Test(edition);
@@ -86,7 +86,6 @@ function setupEditionHelper(baseState, edition) {
 }
 
 function winnerDecider(plChoice, compChoice, prevScore) {
-    console.log(`DEBUG - WinnerDecider - ${plChoice.loseAgainst.includes(compChoice.name)}`)
     if (plChoice.name === compChoice.name) return ({ score: prevScore, status: "Draw" });
     else if (plChoice.loseAgainst.includes(compChoice.name)) {
         return { score: prevScore === 0 ? 0 : prevScore - 1, status: "YOU LOSE" };
@@ -110,6 +109,7 @@ function updateShowResultHelper(baseState) {
 
 function resetBattlePhaseHelper(baseState) {
     const nextState = produce(baseState, draft => {
+        draft.score = 0;
         draft.battleStarted = false;
         draft.showResult = false;
         draft.resultStatus = ""
