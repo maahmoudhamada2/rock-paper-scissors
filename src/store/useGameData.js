@@ -17,7 +17,7 @@ const useGameData = create((set) => ({
         computerChoice: { winner: false },
     },
 
-    switchEdition: () => set(state => ({ ...state, isChoosed: false })),
+    switchEdition: () => set(state => ({ ...state, isChoosed: false, score: 0 })),
     setupGameEdition: (edition) => set(state => setupEditionHelper(state, edition)),
     updateShowRules: () => set(state => ({ ...state, showRules: !state.showRules })),
     updateShowResult: () => set(state => updateShowResultHelper(state)),
@@ -85,13 +85,30 @@ function setupEditionHelper(baseState, edition) {
     return nextState
 }
 
-function winnerDecider(plChoice, compChoice, prevScore) {
-    if (plChoice.name === compChoice.name) return ({ score: prevScore, status: "Draw" });
+function winnerDecider(plChoice, compChoice, draft) {
+    if (plChoice.name === compChoice.name) return ({ score: draft.score, status: "Draw" });
     else if (plChoice.loseAgainst.includes(compChoice.name)) {
-        return { score: prevScore === 0 ? 0 : prevScore - 1, status: "YOU LOSE" };
+        return { score: draft.score === 0 ? 0 : draft.score - 1, status: "YOU LOSE" };
     } else {
-        return { score: prevScore + 1, status: "YOU WIN" };
+        return { score: draft.score + 1, status: "YOU WIN" };
     }
+}
+
+function winnerDeciderBeta(draft) {
+    const plChoice = draft.battlePhase.playerChoice
+    const compChoice = draft.battlePhase.computerChoice
+    if (plChoice.name === compChoice.name) {
+        draft.resultStatus = 'Draw'
+    } else if (plChoice.loseAgainst.includes(compChoice.name)) {
+        draft.score = draft.score === 0 ? 0 : draft.score - 1;
+        draft.resultStatus = 'YOU LOSE'
+        compChoice.winner = true
+    } else {
+        draft.score = draft.score + 1
+        draft.resultStatus = 'YOU WIN'
+        plChoice.winner = true
+    }
+    draft.showResult = true
 }
 
 
@@ -99,17 +116,18 @@ function updateShowResultHelper(baseState) {
     const nextState = produce(baseState, draft => {
         const plChoice = draft.battlePhase.playerChoice;
         const compChoice = draft.battlePhase.computerChoice;
-        const { status, score } = winnerDecider(plChoice, compChoice, draft.score)
-        draft.showResult = true;
-        draft.resultStatus = status;
-        draft.score = score
+        winnerDeciderBeta(draft)
+        // draft.showResult = true;
+        // draft.resultStatus = status;
+        // draft.score = score
     })
     return nextState
 }
 
 function resetBattlePhaseHelper(baseState) {
     const nextState = produce(baseState, draft => {
-        draft.score = 0;
+        // draft.score = 0;
+        draft.showRules = false
         draft.battleStarted = false;
         draft.showResult = false;
         draft.resultStatus = ""

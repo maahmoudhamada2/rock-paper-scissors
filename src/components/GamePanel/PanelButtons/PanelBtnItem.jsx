@@ -1,4 +1,5 @@
 import useGameData from "../../../store/useGameData";
+import clsx from "clsx";
 
 export default function PanelBtnItem({ shapeData }) {
   const updateBattlePhase = useGameData((state) => state.updateBattlePhase);
@@ -6,7 +7,10 @@ export default function PanelBtnItem({ shapeData }) {
 
   return (
     <div
-      className={`w-full hover:scale-90 active:scale-80 transition-all relative ${shapeData.position} row-span-2 z-1 bg-white rounded-full aspect-square`}>
+      className={clsx(
+        `w-full hover:scale-90 active:scale-80 transition-all relative ${shapeData.position} row-span-2 z-1 bg-white rounded-full aspect-square`,
+        shapeData.winner ? "rings" : null
+      )}>
       <div
         className={`inset-shadow-choose-btn w-full h-full rounded-full border-[clamp(1rem,1vw,2rem)] ${shapeData.borderColor}`}>
         <button

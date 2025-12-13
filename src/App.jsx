@@ -7,6 +7,7 @@ export default function App() {
   const isChoosed = useGameData((state) => state.isChoosed);
   const showRules = useGameData((state) => state.showRules);
   const updateShowRules = useGameData((state) => state.updateShowRules);
+
   return (
     <>
       {isChoosed ? <GamePanel /> : <ChossingEdition />}{" "}
