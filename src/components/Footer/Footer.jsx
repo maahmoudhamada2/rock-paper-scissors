@@ -6,12 +6,12 @@ export default function Footer({ onLoadRules }) {
   return (
     <footer className="w-full flex justify-center gap-2 md:justify-end md:py-[0.5rem]">
       <button
-        className="text-[0.9rem] border px-5 py-2 rounded-lg border-white text-white"
+        className="cursor-pointer text-[0.9rem] border px-5 py-2 rounded-lg border-white text-white"
         onClick={onLoadRules}>
         RULES
       </button>
       <button
-        className="text-[0.9rem] border border-white text-white rounded-lg py-2 px-5"
+        className="cursor-pointer text-[0.9rem] border border-white text-white rounded-lg py-2 px-5"
         onClick={() => {
           resetBattlePhase();
           switchEdition();

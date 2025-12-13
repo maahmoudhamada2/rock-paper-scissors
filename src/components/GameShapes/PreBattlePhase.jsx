@@ -20,8 +20,8 @@ export default function PreBattlePhase() {
     //     />
     //   ))}
     <div className="max-w-[20rem] aspect-square grid grid-cols-15 grid-rows-15">
-      <div className="w-[86%] h-full row-start-2 col-start-3 row-span-13 col-span-13">
-        <container.background className="w-full h-full" />
+      <div className={`w-[86%] h-full ${container.background.position}`}>
+        <container.background.icon className="w-full h-full" />
       </div>
       {container.shapes.map((shape) => (
         <GameShapeItem key={shape.id} shapeData={shape} />

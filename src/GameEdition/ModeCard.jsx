@@ -1,4 +1,3 @@
-import { ClassicBtns, RPSLSBtns } from "../icons";
 import useGameData from "../store/useGameData";
 
 export default function ModeCard({ title, desciption, Cover, id }) {
@@ -12,10 +11,9 @@ export default function ModeCard({ title, desciption, Cover, id }) {
         <Cover />
       </header>
       <main className="rounded-b-2xl p-4 flex flex-col items-center gap-[0.7rem] bg-[#0F172A]">
-        <h2 className="text-[#38BDF8] font-bold">Classic Edition</h2>
+        <h2 className="text-[#38BDF8] font-bold">{title}</h2>
         <p className="text-[#CBD5E1] text-[0.9rem] text-center leading-normal">
-          RPS (Rock, Paper, Scissors) has three choices, forming a simple cycle
-          (rock beats scissors, scissors beats paper, paper beats rock)
+          {desciption}
         </p>
         <button
           onClick={handleClick}

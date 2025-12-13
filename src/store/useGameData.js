@@ -26,7 +26,7 @@ const useGameData = create((set) => ({
 }))
 
 function Test(edition) {
-    const background = edition === 'classic' ? BgTriangle : BgPentagon;
+    const background = edition === 'classic' ? ({ icon: BgTriangle, position: 'row-start-3 col-start-4 row-span-14 col-span-11' }) : ({ icon: BgPentagon, position: 'row-start-2 col-start-3 row-span-13 col-span-13' });
     const shapes = [
         {
             id: 1,
@@ -34,7 +34,7 @@ function Test(edition) {
             borderColor: 'border-blue-500',
             loseAgainst: ['scissors', 'lizard'],
             icon: PaperIcon,
-            position: edition === 'classic' ? 'row-start-1 col-start-1 col-span-6' : 'row-start-5 col-start-11 col-span-5'
+            position: edition === 'classic' ? 'row-start-3 col-start-2 col-span-6' : 'row-start-5 col-start-11 col-span-5'
         },
         {
             id: 2,
@@ -42,7 +42,7 @@ function Test(edition) {
             borderColor: 'border-gold-500',
             loseAgainst: ['rock', 'spock'],
             icon: ScissorsIcon,
-            position: edition === 'classic' ? 'row-start-1 col-start-10 col-span-6' : 'row-start-1 col-start-6 col-span-5'
+            position: edition === 'classic' ? 'row-start-3 col-start-10 col-span-6' : 'row-start-1 col-start-6 col-span-5'
         },
         {
             id: 3,
@@ -58,7 +58,7 @@ function Test(edition) {
             borderColor: 'border-purple-700',
             loseAgainst: ['rock', 'scissors'],
             icon: LizardIcon,
-            position: edition === 'classic' ? null : 'row-start-11 col-start-3 col-span-5'
+            position: 'row-start-11 col-start-3 col-span-5'
         },
         {
             id: 5,
@@ -66,7 +66,7 @@ function Test(edition) {
             borderColor: 'border-lightblue-500',
             loseAgainst: ['lizard', 'paper'],
             icon: SpockIcon,
-            position: edition === 'classic' ? null : 'row-start-5 col-start-1 col-span-5'
+            position: 'row-start-5 col-start-1 col-span-5'
         }
     ]
     return {
