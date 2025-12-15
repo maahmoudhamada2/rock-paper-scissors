@@ -9,7 +9,7 @@ const initialState = {
     currentEdition: null,
     currentPhase: phases.EDITIONS,
     showRules: false,
-    buttonsContainer: EDITIONS.classic,
+    buttonsContainer: {},
     battlePicks: {
         plPick: {},
         compPick: {}
@@ -22,13 +22,24 @@ const useGameData = create(set => ({
     setupEdition: (edition) => set(state => setupEditionHelper(state, edition)),
     startPlayingPhase: (shapeId) => set(state => startPlayingHelper(state, shapeId)),
     decideWinner: () => set(state => decideWinnerHelper(state)),
-    gameReset: () => set((state) => ({ ...initialState, score: state.score, currentPhase: phases.IDLE })),
+    gameReset: () => set(state => resetGameHelper(state)),
     toggleRules: () => set(state => ({ ...state, showRules: !state.showRules }))
 
 }))
 
+function resetGameHelper(baseState) {
+    const nextState = produce(baseState, draft => {
+        draft.currentPhase = phases.IDLE
+        draft.resultStatus = ""
+        draft.battlePicks = initialState.battlePicks
+
+    })
+    return nextState
+}
+
 function setupEditionHelper(baseState, edition) {
     const nextState = produce(baseState, draft => {
+        draft.currentEdition = edition
         draft.currentPhase = phases.IDLE
         draft.buttonsContainer = EDITIONS[edition]
     })

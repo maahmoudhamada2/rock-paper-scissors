@@ -1,6 +1,9 @@
-import { ClassicRules, CloseIcon } from "../icons";
+import { ClassicRules, RPSLSRules, CloseIcon } from "../icons";
+import useGameData from "../store/useGameData";
 
 export default function RulesModal({ toggleRules }) {
+  const currentEdition = useGameData((state) => state.currentEdition);
+
   return (
     <div className="z-3 w-full h-full bg-white flex justify-center items-center fixed top-0 left-0 md:bg-[#00000091]">
       <article className="h-full md:h-auto p-8 flex flex-col justify-around items-center md:flex-row md:flex-wrap md:justify-between gap-8 bg-white md:max-w-[20rem]  md:rounded-2xl">
@@ -10,7 +13,11 @@ export default function RulesModal({ toggleRules }) {
           </h1>
         </header>
         <main className="md:w-full md:order-3">
-          <ClassicRules className="w-full h-full" />
+          {currentEdition === "classic" ? (
+            <ClassicRules className="w-full h-full" />
+          ) : (
+            <RPSLSRules className="w-full h-full" />
+          )}
         </main>
         <footer className="md:order-2">
           <button onClick={toggleRules}>
