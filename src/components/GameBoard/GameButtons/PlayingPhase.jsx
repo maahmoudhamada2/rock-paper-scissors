@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import GameBtnItem from "./GameBtnItem";
-import useGameData from "../../store/useGameData";
+import useGameData from "../../../store/useGameData";
 import GameResult from "../GameResult/GameResult";
 
 export default function PlayingPhase() {

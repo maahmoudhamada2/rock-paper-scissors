@@ -1,5 +1,5 @@
-import { ClassicRules, RPSLSRules, CloseIcon } from "../icons";
-import useGameData from "../store/useGameData";
+import { ClassicRules, RPSLSRules, CloseIcon } from "../../icons";
+import useGameData from "../../store/useGameData";
 
 export default function RulesModal({ toggleRules }) {
   const currentEdition = useGameData((state) => state.currentEdition);

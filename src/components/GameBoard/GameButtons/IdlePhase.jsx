@@ -1,4 +1,4 @@
-import useGameData from "../../store/useGameData";
+import useGameData from "../../../store/useGameData";
 import GameBtnItem from "./GameBtnItem";
 
 export default function PreBattlePhase() {

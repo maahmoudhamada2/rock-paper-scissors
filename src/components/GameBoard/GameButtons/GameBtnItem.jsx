@@ -1,4 +1,4 @@
-import useGameData from "../../store/useGameData";
+import useGameData from "../../../store/useGameData";
 import clsx from "clsx";
 
 export default function GameBtnItem({ shapeData, disabled, winner = null }) {

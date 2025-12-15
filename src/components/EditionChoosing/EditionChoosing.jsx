@@ -1,5 +1,5 @@
 import EditionCard from "./EditionCard";
-import { ClassicBtns, RPSLSBtns } from "../icons";
+import { ClassicBtns, RPSLSBtns } from "../../icons";
 
 export default function EditionChoosing() {
   return (

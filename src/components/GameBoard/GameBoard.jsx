@@ -1,7 +1,7 @@
 import GameButtons from "./GameButtons/GameButtons";
 import BoardHeader from "./BoardHeader/BoardHeader";
 import BoardFooter from "./BoardFooter/BoardFooter";
-import useGameData from "../store/useGameData";
+import useGameData from "../../store/useGameData";
 
 export default function GameBoard() {
   const toggleRules = useGameData((state) => state.toggleRules);

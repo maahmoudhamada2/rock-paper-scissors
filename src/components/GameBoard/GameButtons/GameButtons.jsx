@@ -1,6 +1,7 @@
-import useGameData from "../../store/useGameData";
+import useGameData from "../../../store/useGameData";
 import IdlePhase from "./IdlePhase";
 import PlayingPhase from "./PlayingPhase";
+
 export default function GameButtons() {
   const currentPhase = useGameData((state) => state.currentPhase);
   return (

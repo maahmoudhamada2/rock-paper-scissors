@@ -1,4 +1,4 @@
-import useGameData from "../store/useGameData";
+import useGameData from "../../store/useGameData";
 
 export default function EditionCard({ title, desciption, Cover, id }) {
   const setupEdition = useGameData((state) => state.setupEdition);

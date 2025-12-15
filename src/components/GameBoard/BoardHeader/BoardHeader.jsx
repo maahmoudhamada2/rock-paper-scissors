@@ -1,6 +1,6 @@
 import GameScore from "./GameScore";
-import { ClassicLogo, RPSLSLogo } from "../../icons";
-import useGameData from "../../store/useGameData";
+import { ClassicLogo, RPSLSLogo } from "../../../icons";
+import useGameData from "../../../store/useGameData";
 
 export default function PanelHeader() {
   const currentEdition = useGameData((state) => state.currentEdition);
