@@ -18,7 +18,7 @@ const initialState = {
 
 const useGameData = create(set => ({
     ...initialState,
-
+    switchEdition: () => set(initialState),
     setupEdition: (edition) => set(state => setupEditionHelper(state, edition)),
     startPlayingPhase: (shapeId) => set(state => startPlayingHelper(state, shapeId)),
     decideWinner: () => set(state => decideWinnerHelper(state)),
