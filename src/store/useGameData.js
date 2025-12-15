@@ -6,7 +6,8 @@ import { phases, results } from "./constants"
 const initialState = {
     score: 0,
     resultStatus: "",
-    currentPhase: phases.IDLE,
+    currentEdition: null,
+    currentPhase: phases.EDITIONS,
     showRules: false,
     buttonsContainer: EDITIONS.classic,
     battlePicks: {
@@ -17,12 +18,23 @@ const initialState = {
 
 const useGameData = create(set => ({
     ...initialState,
+
+    setupEdition: (edition) => set(state => setupEditionHelper(state, edition)),
     startPlayingPhase: (shapeId) => set(state => startPlayingHelper(state, shapeId)),
     decideWinner: () => set(state => decideWinnerHelper(state)),
-    gameReset: () => set((state) => ({ ...initialState, score: state.score })),
+    gameReset: () => set((state) => ({ ...initialState, score: state.score, currentPhase: phases.IDLE })),
     toggleRules: () => set(state => ({ ...state, showRules: !state.showRules }))
 
 }))
+
+function setupEditionHelper(baseState, edition) {
+    const nextState = produce(baseState, draft => {
+        draft.currentPhase = phases.IDLE
+        draft.buttonsContainer = EDITIONS[edition]
+    })
+    return nextState
+}
+
 
 function decideWinnerHelper(baseState) {
     const nextState = produce(baseState, draft => {

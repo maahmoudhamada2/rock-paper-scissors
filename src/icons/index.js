@@ -5,5 +5,7 @@ import ScissorsIcon from './ScissorsIcon'
 import PaperIcon from './PaperIcon'
 import CloseIcon from './CloseIcon'
 import ClassicRules from "./ClassicRules";
+import ClassicBtns from "./ClassicBtns";
+import RPSLSBtns from "./RPSLSBtns";
 
-export { ClassicRules, CloseIcon, ClassicLogo, RockIcon, PaperIcon, ScissorsIcon, BgTriangle }
+export { RPSLSBtns, ClassicBtns, ClassicRules, CloseIcon, ClassicLogo, RockIcon, PaperIcon, ScissorsIcon, BgTriangle }
