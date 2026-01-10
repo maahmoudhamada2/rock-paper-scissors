@@ -26,11 +26,15 @@ export default function PlayingPhase() {
         </p>
       </section>
       <section className="w-[clamp(2rem,35vw,10rem)] md:w-[clamp(3rem,40vw,15rem)] flex flex-col items-center gap-4 md:flex-col-reverse md:order-3">
-        <GameBtnItem
-          shapeData={compPick.shape}
-          disabled={true}
-          winner={compPick.winner}
-        />
+        {currentPhase === "result" ? (
+          <GameBtnItem
+            shapeData={compPick.shape}
+            disabled={true}
+            winner={compPick.winner}
+          />
+        ) : (
+          <div className="w-full rounded-full aspect-square bg-[#182845]"></div>
+        )}
         <p className="z-1 font-semibold  text-[clamp(0.7rem,2vw,1.3rem)]">
           The HOUSE PICKED
         </p>
